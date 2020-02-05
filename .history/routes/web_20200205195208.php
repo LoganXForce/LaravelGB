@@ -14,4 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::resource('trainers','TrainersController');
+
+Route::resource('trainer','TrainerCotroller@prueba');
+
+Route::get('prueba/{name}', 'PruebaController@prueba');
+
+Route::get('/name/{name}/lastname/{lastname?}' , function($name, $lastname = null){
+    return 'Hola yo soy '. $name . $lastname;
+});
+
+Route::get('/mi_primer_ruta' , function(){
+    return 'Hello Word.';
+});
