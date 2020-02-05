@@ -15,8 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/name/{name}/lastname/{lastname?}' , function($name, $lastname = null){
-    return 'Hola yo soy '. $name . $lastname;
+Route::get('/name/{name}/lastname/{lastname}' , function($name, $lastname){
+    return 'Hola yo soy '. $name . $lastname.;
 });
 
 Route::get('/mi_primer_ruta' , function(){
