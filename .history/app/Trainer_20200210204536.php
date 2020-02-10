@@ -6,13 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Trainer extends Model
 {
-    protected $fillable = [
-		'nombre', 
-		'avatar',
-		'slug'
-	];
+    protected.$fillable [
+        'nombre',
+        'avatar',
+        'slug'
+    ];
 
-    public function getRouteKeyName(){
+    public funtion getRouteKeyName(){
         return 'slug';
     }
 }

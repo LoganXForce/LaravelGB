@@ -53,12 +53,11 @@ class TrainersController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminat e\Http\Response
+     * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        $trainer = Trainer::find($id);
-        return view('trainers.show', compact('trainer'));
+        //
     }
 
     /**

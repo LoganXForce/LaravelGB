@@ -1,7 +1,7 @@
 <?php
 
 namespace LaraDex\Http\Controllers;
-use LaraDex\Trainer;
+
 use Illuminate\Http\Request;
 
 class TrainersController extends Controller
@@ -13,8 +13,7 @@ class TrainersController extends Controller
      */
     public function index()
     {
-        $trainers = Trainer::all();
-        return view ('trainers.index', compact('trainers'));
+        return 'Hola estamos dentro de el controlador Trainers';
         //
     }
 
@@ -37,28 +36,23 @@ class TrainersController extends Controller
      */
     public function store(Request $request)
     {
-        if($request->hasFile('avatar')){
-            $file = $request->file('avatar');
-            $name = time().$file->getClientOriginalName();
-            $file->move(public_path().'/images/', $name);
-        }
         $trainer = new Trainer();
-        $trainer->name = $request->input('name');
-        $trainer->avatar = $name;
+        $tr->name = $request->input('name');
         $trainer->save();
+
         return 'Saved';
+        //
     }
 
     /**
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminat e\Http\Response
+     * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        $trainer = Trainer::find($id);
-        return view('trainers.show', compact('trainer'));
+        //
     }
 
     /**

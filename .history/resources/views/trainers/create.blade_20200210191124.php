@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Trainers Create')
 @section('content')
-<form class="form-group" method="POST" action="/trainers" enctype="multipart/form-data">
+<form class="form-group" method="POST" action="/trainers">
     @csrf
     <div class="form-group">
         <label for="">Nombre</label>
